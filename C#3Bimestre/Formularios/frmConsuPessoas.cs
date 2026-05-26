@@ -1,0 +1,27 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace C_3Bimestre.Formularios
+{
+    public partial class frmConsuPessoas : Form
+    {
+        public frmConsuPessoas()
+        {
+            InitializeComponent();
+        }
+
+        private void frmConsuPessoas_Load(object sender, EventArgs e)
+        {
+            // TODO: esta linha de código carrega dados na tabela 'dataSet_Agenda.Pessoa'. Você pode movê-la ou removê-la conforme necessário.
+            this.pessoaTableAdapter.Fill(this.dataSet_Agenda.Pessoa);
+
+        }
+    }
+}
