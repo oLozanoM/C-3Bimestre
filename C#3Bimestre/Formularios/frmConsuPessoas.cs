@@ -20,8 +20,38 @@ namespace C_3Bimestre.Formularios
         private void frmConsuPessoas_Load(object sender, EventArgs e)
         {
             // TODO: esta linha de código carrega dados na tabela 'dataSet_Agenda.Pessoa'. Você pode movê-la ou removê-la conforme necessário.
-            this.pessoaTableAdapter.Fill(this.dataSet_Agenda.Pessoa);
+            try {
+                this.pessoaTableAdapter.Fill(this.dataSet_Agenda.Pessoa);
+            }
+            catch (System.Data.SqlClient.SqlException ex) {
+                System.Diagnostics.Debug.WriteLine($"SqlException Number={ex.Number}, Server={ex.Server}, Message={ex.Message}");
+                throw;
+            }
+        }
 
+        private void btnFiltrar_Click(object sender, EventArgs e)
+        {
+            string filtro;
+            if (cmbPessoa.SelectedIndex == -1)
+            {
+                MessageBox.Show("Selecione um campo para filtrar.");
+                return;
+            }
+            filtro = cmbPessoa.Text;
+
+            string buscar = cmbBuscar.Text;
+
+            if(buscar == "Igual")
+            {
+                filtro += " = " + txtValor.Text + " ' ";
+            }
+
+            else if (buscar == "Contém")
+            {
+                filtro += " LIKE '%" + txtValor.Text + "%' ";
+            }
+
+            //pessoaMBindingSource.Filter = filtro;
         }
     }
 }

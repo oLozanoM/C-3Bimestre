@@ -29,60 +29,46 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dataSet_Agenda = new C_3Bimestre.Dados.DataSet_Agenda();
-            this.pessoaBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.pessoaTableAdapter = new C_3Bimestre.Dados.DataSet_AgendaTableAdapters.PessoaTableAdapter();
+            this.cmbColuna = new System.Windows.Forms.DataGridView();
             this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nOMEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.eNDERECODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cIDADEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.eMAILDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dATANASCIMENTODataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.pessoaBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSet_Agenda = new C_3Bimestre.Dados.DataSet_Agenda();
+            this.pessoaTableAdapter = new C_3Bimestre.Dados.DataSet_AgendaTableAdapters.PessoaTableAdapter();
+            this.lblPessoas = new System.Windows.Forms.Label();
+            this.lblBuscar = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.cmbPessoa = new System.Windows.Forms.ComboBox();
             this.cmbBuscar = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtValor = new System.Windows.Forms.TextBox();
             this.btnFiltrar = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet_Agenda)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbColuna)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pessoaBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet_Agenda)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // cmbColuna
             // 
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.cmbColuna.AutoGenerateColumns = false;
+            this.cmbColuna.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.cmbColuna.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.iDDataGridViewTextBoxColumn,
             this.nOMEDataGridViewTextBoxColumn,
             this.eNDERECODataGridViewTextBoxColumn,
             this.cIDADEDataGridViewTextBoxColumn,
             this.eMAILDataGridViewTextBoxColumn,
             this.dATANASCIMENTODataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.pessoaBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(48, 115);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(1255, 407);
-            this.dataGridView1.TabIndex = 0;
-            // 
-            // dataSet_Agenda
-            // 
-            this.dataSet_Agenda.DataSetName = "DataSet_Agenda";
-            this.dataSet_Agenda.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // pessoaBindingSource
-            // 
-            this.pessoaBindingSource.DataMember = "Pessoa";
-            this.pessoaBindingSource.DataSource = this.dataSet_Agenda;
-            // 
-            // pessoaTableAdapter
-            // 
-            this.pessoaTableAdapter.ClearBeforeFill = true;
+            this.cmbColuna.DataSource = this.pessoaBindingSource;
+            this.cmbColuna.Location = new System.Drawing.Point(48, 115);
+            this.cmbColuna.Name = "cmbColuna";
+            this.cmbColuna.RowHeadersWidth = 62;
+            this.cmbColuna.RowTemplate.Height = 28;
+            this.cmbColuna.Size = new System.Drawing.Size(1255, 465);
+            this.cmbColuna.TabIndex = 0;
             // 
             // iDDataGridViewTextBoxColumn
             // 
@@ -133,23 +119,37 @@
             this.dATANASCIMENTODataGridViewTextBoxColumn.Name = "dATANASCIMENTODataGridViewTextBoxColumn";
             this.dATANASCIMENTODataGridViewTextBoxColumn.Width = 150;
             // 
-            // label1
+            // pessoaBindingSource
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(44, 28);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(101, 20);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Pessoas por:";
+            this.pessoaBindingSource.DataMember = "Pessoa";
+            this.pessoaBindingSource.DataSource = this.dataSet_Agenda;
             // 
-            // label2
+            // dataSet_Agenda
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(270, 28);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(63, 20);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Buscar:";
+            this.dataSet_Agenda.DataSetName = "DataSet_Agenda";
+            this.dataSet_Agenda.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // pessoaTableAdapter
+            // 
+            this.pessoaTableAdapter.ClearBeforeFill = true;
+            // 
+            // lblPessoas
+            // 
+            this.lblPessoas.AutoSize = true;
+            this.lblPessoas.Location = new System.Drawing.Point(44, 28);
+            this.lblPessoas.Name = "lblPessoas";
+            this.lblPessoas.Size = new System.Drawing.Size(101, 20);
+            this.lblPessoas.TabIndex = 1;
+            this.lblPessoas.Text = "Pessoas por:";
+            // 
+            // lblBuscar
+            // 
+            this.lblBuscar.AutoSize = true;
+            this.lblBuscar.Location = new System.Drawing.Point(270, 28);
+            this.lblBuscar.Name = "lblBuscar";
+            this.lblBuscar.Size = new System.Drawing.Size(63, 20);
+            this.lblBuscar.TabIndex = 2;
+            this.lblBuscar.Text = "Buscar:";
             // 
             // label3
             // 
@@ -192,12 +192,12 @@
             this.cmbBuscar.Size = new System.Drawing.Size(121, 28);
             this.cmbBuscar.TabIndex = 5;
             // 
-            // textBox1
+            // txtValor
             // 
-            this.textBox1.Location = new System.Drawing.Point(512, 66);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(152, 26);
-            this.textBox1.TabIndex = 7;
+            this.txtValor.Location = new System.Drawing.Point(512, 66);
+            this.txtValor.Name = "txtValor";
+            this.txtValor.Size = new System.Drawing.Size(152, 26);
+            this.txtValor.TabIndex = 7;
             // 
             // btnFiltrar
             // 
@@ -207,6 +207,7 @@
             this.btnFiltrar.TabIndex = 8;
             this.btnFiltrar.Text = "Filtrar";
             this.btnFiltrar.UseVisualStyleBackColor = true;
+            this.btnFiltrar.Click += new System.EventHandler(this.btnFiltrar_Click);
             // 
             // frmConsuPessoas
             // 
@@ -214,19 +215,19 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1334, 645);
             this.Controls.Add(this.btnFiltrar);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtValor);
             this.Controls.Add(this.cmbBuscar);
             this.Controls.Add(this.cmbPessoa);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.lblBuscar);
+            this.Controls.Add(this.lblPessoas);
+            this.Controls.Add(this.cmbColuna);
             this.Name = "frmConsuPessoas";
             this.Text = "ConsultaPessoas";
             this.Load += new System.EventHandler(this.frmConsuPessoas_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet_Agenda)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cmbColuna)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pessoaBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet_Agenda)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -234,7 +235,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView cmbColuna;
         private Dados.DataSet_Agenda dataSet_Agenda;
         private System.Windows.Forms.BindingSource pessoaBindingSource;
         private Dados.DataSet_AgendaTableAdapters.PessoaTableAdapter pessoaTableAdapter;
@@ -244,12 +245,12 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn cIDADEDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn eMAILDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn dATANASCIMENTODataGridViewTextBoxColumn;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label lblPessoas;
+        private System.Windows.Forms.Label lblBuscar;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox cmbPessoa;
         private System.Windows.Forms.ComboBox cmbBuscar;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtValor;
         private System.Windows.Forms.Button btnFiltrar;
     }
 }
