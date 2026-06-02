@@ -995,7 +995,7 @@ SELECT ID, NOME, ENDERECO, CIDADE, EMAIL, DATA_NASCIMENTO FROM Pessoa WHERE (ID 
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "17.0.0.0")]
         private void InitConnection() {
             this._connection = new global::System.Data.SqlClient.SqlConnection();
-            this._connection.ConnectionString = global::C_3Bimestre.Properties.Settings.Default.db_250608ConnectionString;
+            this._connection.ConnectionString = global::C_3Bimestre.Properties.Settings.Default.db_250685ConnectionString;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

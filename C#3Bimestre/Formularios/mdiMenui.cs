@@ -29,12 +29,27 @@ namespace C_3Bimestre.Formularios
 
         private void lblCadastro_Click(object sender, EventArgs e)
         {
+            
+        }
+
+        private void lblConsulta_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btn_relatiorios_mb_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_Cadastro_mb_Click(object sender, EventArgs e)
+        {
             frmCadPessoas frmCadPessoas = new frmCadPessoas();
             frmCadPessoas.MdiParent = this;
             frmCadPessoas.Show();
         }
 
-        private void lblConsulta_Click(object sender, EventArgs e)
+        private void btn_Consulta_mb_Click(object sender, EventArgs e)
         {
             frmConsuPessoas frmConsuPessoas = new frmConsuPessoas();
             frmConsuPessoas.MdiParent = this;

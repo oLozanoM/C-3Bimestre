@@ -29,10 +29,8 @@
         private void InitializeComponent()
         {
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-            this.lblRelatorios = new System.Windows.Forms.ToolStripLabel();
-            this.lblCadastro = new System.Windows.Forms.ToolStripTextBox();
             this.toolStripLabel1 = new System.Windows.Forms.ToolStripLabel();
-            this.lblConsulta = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripLabel2 = new System.Windows.Forms.ToolStripLabel();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -40,42 +38,23 @@
             // 
             this.toolStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.lblRelatorios,
-            this.lblCadastro,
             this.toolStripLabel1,
-            this.lblConsulta});
+            this.toolStripLabel2});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1478, 31);
+            this.toolStrip1.Size = new System.Drawing.Size(1478, 28);
             this.toolStrip1.TabIndex = 1;
             this.toolStrip1.Text = "toolStrip1";
-            // 
-            // lblRelatorios
-            // 
-            this.lblRelatorios.Name = "lblRelatorios";
-            this.lblRelatorios.Size = new System.Drawing.Size(90, 26);
-            this.lblRelatorios.Text = "Relatórios";
-            this.lblRelatorios.Click += new System.EventHandler(this.lblRelatorios_Click);
-            // 
-            // lblCadastro
-            // 
-            this.lblCadastro.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.lblCadastro.Name = "lblCadastro";
-            this.lblCadastro.Size = new System.Drawing.Size(100, 31);
-            this.lblCadastro.Text = "Cadastro";
-            this.lblCadastro.Click += new System.EventHandler(this.lblCadastro_Click);
             // 
             // toolStripLabel1
             // 
             this.toolStripLabel1.Name = "toolStripLabel1";
-            this.toolStripLabel1.Size = new System.Drawing.Size(0, 26);
+            this.toolStripLabel1.Size = new System.Drawing.Size(0, 28);
             // 
-            // lblConsulta
+            // toolStripLabel2
             // 
-            this.lblConsulta.Name = "lblConsulta";
-            this.lblConsulta.Size = new System.Drawing.Size(81, 26);
-            this.lblConsulta.Text = "Consulta";
-            this.lblConsulta.Click += new System.EventHandler(this.lblConsulta_Click);
+            this.toolStripLabel2.Name = "toolStripLabel2";
+            this.toolStripLabel2.Size = new System.Drawing.Size(0, 28);
             // 
             // mdiMenui
             // 
@@ -97,9 +76,7 @@
         #endregion
 
         private System.Windows.Forms.ToolStrip toolStrip1;
-        private System.Windows.Forms.ToolStripLabel lblRelatorios;
-        private System.Windows.Forms.ToolStripTextBox lblCadastro;
         private System.Windows.Forms.ToolStripLabel toolStripLabel1;
-        private System.Windows.Forms.ToolStripLabel lblConsulta;
+        private System.Windows.Forms.ToolStripLabel toolStripLabel2;
     }
 }

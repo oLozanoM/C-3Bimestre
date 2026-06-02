@@ -33,5 +33,16 @@ namespace C_3Bimestre.Properties {
                 return ((string)(this["db_250608ConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=172.16.255.252;Initial Catalog=db_250685;User ID=250685;TrustServerCe" +
+            "rtificate=True")]
+        public string db_250685ConnectionString {
+            get {
+                return ((string)(this["db_250685ConnectionString"]));
+            }
+        }
     }
 }
