@@ -37,6 +37,7 @@ namespace C_3Bimestre.Formularios
                 MessageBox.Show("Selecione um campo para filtrar.");
                 return;
             }
+
             filtro = cmbPessoa.Text;
 
             string buscar = cmbBuscar.Text;
@@ -51,7 +52,7 @@ namespace C_3Bimestre.Formularios
                 filtro += " LIKE '%" + txtValor.Text + "%' ";
             }
 
-            //pessoaMBindingSource.Filter = filtro;
+            pessoaBindingSource.Filter = filtro;
         }
     }
 }
