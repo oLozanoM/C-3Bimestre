@@ -37,23 +37,24 @@ namespace C_3Bimestre.Formularios
             
         }
 
-        private void btn_relatiorios_mb_Click(object sender, EventArgs e)
+        private void consultarToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
+            frmConsuPessoas frmConsuPessoas = new frmConsuPessoas();
+            frmConsuPessoas.MdiParent = this;
+            frmConsuPessoas.Show();
         }
 
-        private void btn_Cadastro_mb_Click(object sender, EventArgs e)
+        private void cadastroToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmCadPessoas frmCadPessoas = new frmCadPessoas();
             frmCadPessoas.MdiParent = this;
             frmCadPessoas.Show();
         }
 
-        private void btn_Consulta_mb_Click(object sender, EventArgs e)
+        private void relatóriosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmConsuPessoas frmConsuPessoas = new frmConsuPessoas();
-            frmConsuPessoas.MdiParent = this;
-            frmConsuPessoas.Show();
+
         }
     }
 }
