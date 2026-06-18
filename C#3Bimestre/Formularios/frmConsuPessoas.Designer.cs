@@ -42,8 +42,8 @@
             this.lblPessoas = new System.Windows.Forms.Label();
             this.lblBuscar = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.cmbPessoa = new System.Windows.Forms.ComboBox();
-            this.cmbBuscar = new System.Windows.Forms.ComboBox();
+            this.cbmCombo = new System.Windows.Forms.ComboBox();
+            this.cbmBuscar = new System.Windows.Forms.ComboBox();
             this.txtValor = new System.Windows.Forms.TextBox();
             this.btnFiltrar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.cmbColuna)).BeginInit();
@@ -160,37 +160,38 @@
             this.label3.TabIndex = 3;
             this.label3.Text = "Valor";
             // 
-            // cmbPessoa
+            // cbmCombo
             // 
-            this.cmbPessoa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbPessoa.FormattingEnabled = true;
-            this.cmbPessoa.Items.AddRange(new object[] {
+            this.cbmCombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbmCombo.FormattingEnabled = true;
+            this.cbmCombo.Items.AddRange(new object[] {
             "ID",
             "NOME",
             "ENDERECO",
             "CIDADE",
             "EMAIL",
             "DATA_NASCIMENTO"});
-            this.cmbPessoa.Location = new System.Drawing.Point(48, 66);
-            this.cmbPessoa.Name = "cmbPessoa";
-            this.cmbPessoa.Size = new System.Drawing.Size(121, 28);
-            this.cmbPessoa.TabIndex = 4;
+            this.cbmCombo.Location = new System.Drawing.Point(48, 66);
+            this.cbmCombo.Name = "cbmCombo";
+            this.cbmCombo.Size = new System.Drawing.Size(121, 28);
+            this.cbmCombo.TabIndex = 4;
+            this.cbmCombo.SelectedIndexChanged += new System.EventHandler(this.cbmCombo_SelectedIndexChanged);
             // 
-            // cmbBuscar
+            // cbmBuscar
             // 
-            this.cmbBuscar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmbBuscar.FormattingEnabled = true;
-            this.cmbBuscar.Items.AddRange(new object[] {
+            this.cbmBuscar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbmBuscar.FormattingEnabled = true;
+            this.cbmBuscar.Items.AddRange(new object[] {
             "Todos",
             "Igual",
             "Que começa com",
             "Que termina com",
             "Que contém",
             "Que esteja entre"});
-            this.cmbBuscar.Location = new System.Drawing.Point(274, 66);
-            this.cmbBuscar.Name = "cmbBuscar";
-            this.cmbBuscar.Size = new System.Drawing.Size(121, 28);
-            this.cmbBuscar.TabIndex = 5;
+            this.cbmBuscar.Location = new System.Drawing.Point(274, 66);
+            this.cbmBuscar.Name = "cbmBuscar";
+            this.cbmBuscar.Size = new System.Drawing.Size(121, 28);
+            this.cbmBuscar.TabIndex = 5;
             // 
             // txtValor
             // 
@@ -216,8 +217,8 @@
             this.ClientSize = new System.Drawing.Size(1334, 645);
             this.Controls.Add(this.btnFiltrar);
             this.Controls.Add(this.txtValor);
-            this.Controls.Add(this.cmbBuscar);
-            this.Controls.Add(this.cmbPessoa);
+            this.Controls.Add(this.cbmBuscar);
+            this.Controls.Add(this.cbmCombo);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.lblBuscar);
             this.Controls.Add(this.lblPessoas);
@@ -248,8 +249,8 @@
         private System.Windows.Forms.Label lblPessoas;
         private System.Windows.Forms.Label lblBuscar;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox cmbPessoa;
-        private System.Windows.Forms.ComboBox cmbBuscar;
+        private System.Windows.Forms.ComboBox cbmCombo;
+        private System.Windows.Forms.ComboBox cbmBuscar;
         private System.Windows.Forms.TextBox txtValor;
         private System.Windows.Forms.Button btnFiltrar;
     }

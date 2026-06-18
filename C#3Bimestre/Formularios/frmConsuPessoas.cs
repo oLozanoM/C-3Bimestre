@@ -34,28 +34,34 @@ namespace C_3Bimestre.Formularios
         private void btnFiltrar_Click(object sender, EventArgs e)
         {
             string filtro;
-            if (cmbPessoa.SelectedIndex == -1)
+            if (cbmCombo.SelectedIndex == -1)
             {
                 MessageBox.Show("Escolha a coluna para pesquisar");
                 return;
             }
 
-            filtro = cmbPessoa.Text;
+            filtro = cbmCombo.Text;
 
-            string busca = cmbPessoa.Text;
+            string busca = cbmBuscar.Text;
 
             if (busca == "Igual")
             {
-                filtro += "=" + txtValor.Text + "'";
-
+                filtro += "'" + txtValor.Text + "'";
             }
 
             else if (busca == "Que começa com")
             {
-                filtro += " like " + txtValor.Text + "%";
+                filtro += "like " + txtValor.Text + " %";
             }
 
+            string vCouluna 
+
             pessoaBindingSource.Filter = filtro;
+        }
+
+        private void cbmCombo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
