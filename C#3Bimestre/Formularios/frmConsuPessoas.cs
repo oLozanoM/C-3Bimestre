@@ -33,28 +33,61 @@ namespace C_3Bimestre.Formularios
 
         private void btnFiltrar_Click(object sender, EventArgs e)
         {
-            string filtro;
             if (cbmCombo.SelectedIndex == -1)
             {
                 MessageBox.Show("Escolha a coluna para pesquisar");
                 return;
             }
 
-            filtro = cbmCombo.Text;
-
+            string column = cbmCombo.Text;
             string busca = cbmBuscar.Text;
+            string raw = txtValor.Text ?? "";
+            if (busca == "Todos")
+            {
+                pessoaBindingSource.Filter = null;
+                return;
+            }
+
+            string escaped = raw.Replace("'", "''");
+            string filtro = "";
+
+            bool isNumeric = column == "ID";
 
             if (busca == "Igual")
             {
-                filtro += "'" + txtValor.Text + "'";
+                filtro = isNumeric ? $"{column} = {escaped}" : $"{column} = '{escaped}'";
             }
-
             else if (busca == "Que começa com")
             {
-                filtro += "like " + txtValor.Text + " %";
+                if (isNumeric) { MessageBox.Show("Operação inválida para coluna numérica."); return; }
+                filtro = $"{column} LIKE '{escaped}%'";
             }
-
-            string vCouluna 
+            else if (busca == "Que termina com")
+            {
+                if (isNumeric) { MessageBox.Show("Operação inválida para coluna numérica."); return; }
+                filtro = $"{column} LIKE '%{escaped}'";
+            }
+            else if (busca == "Que contém")
+            {
+                if (isNumeric) { MessageBox.Show("Operação inválida para coluna numérica."); return; }
+                filtro = $"{column} LIKE '%{escaped}%'";
+            }
+            else if (busca == "Que esteja entre")
+            {
+                var parts = raw.Split(';');
+                if (parts.Length != 2) { MessageBox.Show("Informe intervalo no formato min;max"); return; }
+                string a = parts[0].Trim();
+                string b = parts[1].Trim();
+                if (isNumeric)
+                    filtro = $"{column} >= {a} AND {column} <= {b}";
+                else
+                    filtro = $"{column} >= '{a.Replace("'", "''")}' AND {column} <= '{b.Replace("'", "''")}'";
+            }
+            else
+            {
+                MessageBox.Show("Operação de busca desconhecida.");
+                return;
+            }
 
             pessoaBindingSource.Filter = filtro;
         }
