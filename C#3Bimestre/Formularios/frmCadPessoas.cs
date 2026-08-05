@@ -28,7 +28,7 @@ namespace C_3Bimestre.Formularios
         private void frmCadPessoas_Load(object sender, EventArgs e)
         {
             // TODO: esta linha de código carrega dados na tabela 'dataSet_Agenda.Pessoa'. Você pode movê-la ou removê-la conforme necessário.
-            this.pessoaTableAdapter.Fill(this.dataSet_Agenda.Pessoa);
+            this.pessoaTableAdapter.Fill(this.dataSet_Agenda.Pessoa1);
 
         }
 
