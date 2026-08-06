@@ -51,6 +51,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>DataSet_Agenda.xsd</DependentUpon>
     </Compile>
+    <Compile Include="db_250685DataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>db_250685DataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\frmConsuPessoas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -62,6 +67,12 @@
     </Compile>
     <Compile Include="Formularios\frmCadPessoas.Designer.cs">
       <DependentUpon>frmCadPessoas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\Logon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\Logon.Designer.cs">
+      <DependentUpon>Logon.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\mdiMenui.cs">
       <SubType>Form</SubType>
@@ -76,6 +87,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmConsuPessoas.resx">
       <DependentUpon>frmConsuPessoas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\Logon.resx">
+      <DependentUpon>Logon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\mdiMenui.resx">
       <DependentUpon>mdiMenui.cs</DependentUpon>
@@ -99,6 +113,17 @@
     </None>
     <None Include="Dados\DataSet_Agenda.xss">
       <DependentUpon>DataSet_Agenda.xsd</DependentUpon>
+    </None>
+    <None Include="db_250685DataSet.xsc">
+      <DependentUpon>db_250685DataSet.xsd</DependentUpon>
+    </None>
+    <None Include="db_250685DataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>db_250685DataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="db_250685DataSet.xss">
+      <DependentUpon>db_250685DataSet.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
