@@ -144,7 +144,7 @@
             this.pessoaBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
             this.pessoaBindingNavigator.BindingSource = this.pessoaBindingSource;
             this.pessoaBindingNavigator.CountItem = this.bindingNavigatorCountItem;
-            this.pessoaBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
+            this.pessoaBindingNavigator.DeleteItem = null;
             this.pessoaBindingNavigator.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.pessoaBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bindingNavigatorMoveFirstItem,
@@ -204,6 +204,7 @@
             this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
             this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(28, 28);
             this.bindingNavigatorDeleteItem.Text = "Excluir";
+            this.bindingNavigatorDeleteItem.Click += new System.EventHandler(this.bindingNavigatorDeleteItem_Click);
             // 
             // bindingNavigatorMoveFirstItem
             // 
@@ -279,7 +280,7 @@
             // 
             this.iDTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pessoaBindingSource, "ID", true));
             this.iDTextBox.Location = new System.Drawing.Point(148, 39);
-            this.iDTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.iDTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.iDTextBox.Name = "iDTextBox";
             this.iDTextBox.Size = new System.Drawing.Size(83, 20);
             this.iDTextBox.TabIndex = 2;
@@ -288,7 +289,7 @@
             // 
             this.nOMETextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pessoaBindingSource, "NOME", true));
             this.nOMETextBox.Location = new System.Drawing.Point(148, 60);
-            this.nOMETextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.nOMETextBox.Margin = new System.Windows.Forms.Padding(2);
             this.nOMETextBox.Name = "nOMETextBox";
             this.nOMETextBox.Size = new System.Drawing.Size(140, 20);
             this.nOMETextBox.TabIndex = 4;
@@ -297,7 +298,7 @@
             // 
             this.eNDERECOTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pessoaBindingSource, "ENDERECO", true));
             this.eNDERECOTextBox.Location = new System.Drawing.Point(148, 81);
-            this.eNDERECOTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.eNDERECOTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.eNDERECOTextBox.Name = "eNDERECOTextBox";
             this.eNDERECOTextBox.Size = new System.Drawing.Size(209, 20);
             this.eNDERECOTextBox.TabIndex = 6;
@@ -306,7 +307,7 @@
             // 
             this.cIDADETextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pessoaBindingSource, "CIDADE", true));
             this.cIDADETextBox.Location = new System.Drawing.Point(148, 101);
-            this.cIDADETextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cIDADETextBox.Margin = new System.Windows.Forms.Padding(2);
             this.cIDADETextBox.Name = "cIDADETextBox";
             this.cIDADETextBox.Size = new System.Drawing.Size(103, 20);
             this.cIDADETextBox.TabIndex = 8;
@@ -315,7 +316,7 @@
             // 
             this.eMAILTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.pessoaBindingSource, "EMAIL", true));
             this.eMAILTextBox.Location = new System.Drawing.Point(148, 122);
-            this.eMAILTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.eMAILTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.eMAILTextBox.Name = "eMAILTextBox";
             this.eMAILTextBox.Size = new System.Drawing.Size(209, 20);
             this.eMAILTextBox.TabIndex = 10;
@@ -324,7 +325,7 @@
             // 
             this.dATA_NASCIMENTODateTimePicker.DataBindings.Add(new System.Windows.Forms.Binding("Value", this.pessoaBindingSource, "DATA_NASCIMENTO", true));
             this.dATA_NASCIMENTODateTimePicker.Location = new System.Drawing.Point(148, 143);
-            this.dATA_NASCIMENTODateTimePicker.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dATA_NASCIMENTODateTimePicker.Margin = new System.Windows.Forms.Padding(2);
             this.dATA_NASCIMENTODateTimePicker.Name = "dATA_NASCIMENTODateTimePicker";
             this.dATA_NASCIMENTODateTimePicker.Size = new System.Drawing.Size(209, 20);
             this.dATA_NASCIMENTODateTimePicker.TabIndex = 12;
@@ -342,7 +343,7 @@
             this.dataGridViewTextBoxColumn6});
             this.pessoaDataGridView.DataSource = this.pessoaBindingSource;
             this.pessoaDataGridView.Location = new System.Drawing.Point(10, 181);
-            this.pessoaDataGridView.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.pessoaDataGridView.Margin = new System.Windows.Forms.Padding(2);
             this.pessoaDataGridView.Name = "pessoaDataGridView";
             this.pessoaDataGridView.RowHeadersWidth = 62;
             this.pessoaDataGridView.RowTemplate.Height = 28;
@@ -428,7 +429,7 @@
             this.Controls.Add(dATA_NASCIMENTOLabel);
             this.Controls.Add(this.dATA_NASCIMENTODateTimePicker);
             this.Controls.Add(this.pessoaBindingNavigator);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmCadPessoas";
             this.Text = "Cadastro de Pessoas";
             this.Load += new System.EventHandler(this.frmCadPessoas_Load);

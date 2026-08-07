@@ -36,5 +36,14 @@ namespace C_3Bimestre.Formularios
         {
 
         }
+
+        private void bindingNavigatorDeleteItem_Click(object sender, EventArgs e)
+        {
+            if(MessageBox.Show("Deseja Excluir Esse Cadastro?", "Excluindo registro...", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2)==DialogResult.Yes)
+            {
+                pessoaBindingSource.RemoveCurrent();
+                this.tableAdapterManager.UpdateAll(this.dataSet_Agenda);
+            }
+        }
     }
 }
