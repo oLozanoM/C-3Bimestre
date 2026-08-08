@@ -82,6 +82,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>db_250685DataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\frmAniversarianteMes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmAniversarianteMes.Designer.cs">
+      <DependentUpon>frmAniversarianteMes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\frmConsuPessoas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -94,32 +100,44 @@
     <Compile Include="Formularios\frmCadPessoas.Designer.cs">
       <DependentUpon>frmCadPessoas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\frmVisualizaPessoa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\frmVisualizaPessoa.Designer.cs">
+      <DependentUpon>frmVisualizaPessoa.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\Logon.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Formularios\Logon.Designer.cs">
       <DependentUpon>Logon.cs</DependentUpon>
     </Compile>
-    <Compile Include="Formularios\mdiMenui.cs">
+    <Compile Include="Formularios\mdiMenuu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Formularios\mdiMenui.Designer.cs">
-      <DependentUpon>mdiMenui.cs</DependentUpon>
+    <Compile Include="Formularios\mdiMenuu.Designer.cs">
+      <DependentUpon>mdiMenuu.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
+    <EmbeddedResource Include="Formularios\frmAniversarianteMes.resx">
+      <DependentUpon>frmAniversarianteMes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmCadPessoas.resx">
       <DependentUpon>frmCadPessoas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\frmConsuPessoas.resx">
       <DependentUpon>frmConsuPessoas.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\frmVisualizaPessoa.resx">
+      <DependentUpon>frmVisualizaPessoa.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\Logon.resx">
       <DependentUpon>Logon.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\mdiMenui.resx">
-      <DependentUpon>mdiMenui.cs</DependentUpon>
+    <EmbeddedResource Include="Formularios\mdiMenuu.resx">
+      <DependentUpon>mdiMenuu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
